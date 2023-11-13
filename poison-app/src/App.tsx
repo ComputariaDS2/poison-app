@@ -1,11 +1,18 @@
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Cadastro } from './pages/cadastro-usuario'
+import { Login } from './pages/login'
 
 function App() {
-
-
   return (
     <>
-      <h1>Poison App</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Login />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/cadastro' element={<Cadastro />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
